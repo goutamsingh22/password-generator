@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔐 passgen - Python Password Generator
 
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -328,3 +329,6 @@ Released under the [MIT License](LICENSE).
 
 The EFF large wordlist in `passgen/data/` is in the public domain, published by
 the Electronic Frontier Foundation.
+=======
+# password-generator
+>>>>>>> 1b85d669c47ae42ce8cd3da9767947b6c7f97fea
