@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "passgen"
+version = "1.0.0"
+description = "A dependency-free password, passphrase and PIN generator with a strength analyser"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Goutam Singh", email = "25mcaa22@kristujayanti.com" }]
+keywords = ["password", "passphrase", "generator", "security", "cli", "diceware"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build>=1.0", "black>=24.0", "ruff>=0.4"]
+
+[project.scripts]
+passgen = "passgen.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/goutamsingh22/password-generator"
+Repository = "https://github.com/goutamsingh22/password-generator"
+Issues = "https://github.com/goutamsingh22/password-generator/issues"
+
+[tool.setuptools]
+packages = ["passgen"]
+
+[tool.setuptools.package-data]
+passgen = ["data/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
